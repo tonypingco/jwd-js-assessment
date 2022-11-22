@@ -96,7 +96,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	// Calculate the score
 	const calculateScore = () => {
-		console.log('click!');
 		quizArray.map((quizItem, index) => {
 			for (let i = 0; i < 4; i++) {
 				let li = `li_${index}_${i}`;
@@ -114,13 +113,11 @@ window.addEventListener('DOMContentLoaded', () => {
 					let correct = i === quizItem.a;
 					if (correct) {
 						score++; // TASK 1
-						console.log('correct:', score);
 					}
 				}
 			}
 		});
 
-		console.log('score', score);
 		const modalBody = document.querySelector('.modal-body');
 		modalBody.innerText = `Score: ${score} correct answers`;
 	};
